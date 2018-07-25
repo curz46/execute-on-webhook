@@ -8,7 +8,8 @@
   },
   "dependencies": {
     "dotenv": "^6.0.0",
-    "express": "~4.16.0"
+    "express": "~4.16.0",
+    "body-parser": "latest"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
