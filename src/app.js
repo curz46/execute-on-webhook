@@ -31,7 +31,7 @@ app.post('/push/:key', async (req, res) => {
             res.status(200).json({ result: 'ignored-branch' });
         } else {
             for (const cmd of COMMANDS) {
-                child_process.execSync(cmd, { detached: true });
+                child_process.execSync(cmd, { detached: true, stdio: ['inherit', 'pipe', 'pipe'] });
             }
             res.status(200).json({ result: 'success' });
         }
